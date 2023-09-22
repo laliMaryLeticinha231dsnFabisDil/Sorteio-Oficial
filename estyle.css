@@ -1,0 +1,31 @@
+@font-face {
+    font-family: chango;
+    src: url(font/Chango-Regular.ttf);
+}
+
+body {
+    background: rgb(255,253,187);
+    background: radial-gradient(circle, rgba(255,253,187,1) 0%, rgb(229, 227, 163) 31%, rgba(236,217,148,0.9501050420168067) 100%);
+}
+
+.container {
+    .container {
+        width: 900px;
+        height: 200px;
+       background-color: #ffffffc2;
+        border-radius: 19px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+h2 {
+    font-family: chango;
+    font-size: 65px;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

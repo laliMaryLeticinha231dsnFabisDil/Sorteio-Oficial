@@ -1,0 +1,61 @@
+
+@font-face {
+  font-family: chango;
+  src: url(font/Chango-Regular.ttf);
+}
+
+body {
+  background-image: url('img/funko.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  margin: 0;
+}
+
+h2{
+  text-align: center;
+  font-family: chango;
+  color: #ffff;
+  font-size: 60px;
+}
+
+h2,.container{
+  padding: 100px;
+}
+.container {
+  width: 900px;
+  height: 200px;
+  background-color: #5f0d8eb9;
+  border-radius: 19px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+
+  border: none;
+  cursor: pointer;
+  width: 380px;
+  height: 170px;
+
+}
+.Sn, .Sno{
+  padding-left: 200px;
+  padding: 60px;
+  margin-left: 30px;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  border-radius: 60px;
+}
+
+.Sn, .Sno{
+  background-color: #51077cad;
+  color: #ffff;
+  font-size: 35px;
+
+}
