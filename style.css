@@ -8,20 +8,30 @@
     font-family: Catamaran;
     src: url(font/Catamaran-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: Noto Sans;
+    src: url(font/NotoSans-Bold.ttf);
+  }
 
 body{
-    background-color: pink;
+    background: rgb(190,217,212);
+    background: radial-gradient(circle, rgba(190,217,212,1) 0%, rgba(170,228,228,1) 31%, rgba(66,213,185,1) 100%);
 }
 .titulo{
-    font-family: Satisfy ;
-    font-size: 80px;
+    font-family: Noto Sans ;
+    font-size: 60px;
     text-align: center;
     justify-content: center;
     margin-top: 0;
     color: #fff;
 }
 
-
+.container{
+    width: 1400px;
+    height: 400px;
+    background-color: #ffffffa4;
+    border-radius: 10px;
+}
 #max, #min{
     width:220px;
     height:50px;
