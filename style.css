@@ -93,4 +93,53 @@ label{
 
 
 
+
+
+
+
+.container{
+    color: #191919;
+    padding: 0.625rem;
+    border-radius: 8px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 45px #2aa7d1);
+    -webkit-filter: drop-shadow(0 0 15px #3183bd);
+    -moz-filter: drop-shadow(0 0 15px #36a9de);
+    -o-filter: drop-shadow(0 0 15px #1383af);
+    -ms-filter: drop-shadow(0 0 15px #3c8cbe);
+}
+
+
+
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px #2aa7d1);
+        -webkit-filter: drop-shadow(0 0 15px #3183bd);
+        -moz-filter: drop-shadow(0 0 15px #36a9de);
+        -o-filter: drop-shadow(0 0 15px #1383af);
+        -ms-filter: drop-shadow(0 0 15px #3c8cbe);
+    }
+    100% {
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
 /* //resine none para de cooisa coisa de escrever vc sabe*/

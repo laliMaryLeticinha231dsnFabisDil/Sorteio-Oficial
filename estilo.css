@@ -37,42 +37,64 @@ h2 {
 }
 
 /* Começo de botão */
-.btn,
-.btn {
- margin-left: 20vh;
- margin-top: 30vh;
+.separador{
+  width: 170px;
+  height: 170px;
+  background-color: #ffffff00;
 }
-
-
-.main {
-  display: flex;
-  align-items: center;
+.scene {
+  width: 15em;
   justify-content: center;
-}
-
-.btn {
-  width: 370px;
-  height: 70px;
-  font-size: 18px;
-  background: #ef47afba;
-  border: none;
-  border-radius: 50px;
-  color: #000;
-  outline: none;
+  align-items: center;
+ }
+ 
+ .cube {
+  color: #ccc;
   cursor: pointer;
-  transition: all 0.4s;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+  transform-style: preserve-3d;
+  transform-origin: 100% 50%;
+  width: 10em;
+  height: 4em;
+ }
+ 
+
+.cube, .cube{
+  margin-left: 25vh;
+  margin-top: 30vh;
 }
 
-.btn:hover {
-  box-shadow: inset 0 0 0 4px #ef47af,
-    inset 0 0 0 8px #ef6fa0,
-    inset 0 0 0 12px #eea2d2,
-    inset 0 0 0 16px #f0b3c6;
-  background: #f9f9f9;
-  color: #000000;
-}
+ .cube:hover {
+  transform: rotateX(-90deg);
+ }
+ 
+ .side {
+  box-sizing: border-box;
+  position: absolute;
+  height: 5em;
+  width: 15em;
+  text-align: center;
+  /* text-transform: uppercase; */
+  padding-top: 2.2em;
+  font-weight: bold;
+ }
+ 
+ .top {
+  background: rgb(224, 126, 190);
+  color: #ffffff;
+  transform: rotateX(90deg) translate3d(0, 0, 2em);
+  box-shadow: inset 0 0 0 5px #fff;
+ }
+ 
+ .front {
+  background: #d63dab;
+  color: #fff;
+  box-shadow: inset 0 0 0 5px #fff;
+  transform: translate3d(0, 0, 2em);
+ }
+/* fim de botão
 
-/* fim de botão */ 
 
 /* começo da imagem presente */
 .imagem-trevo-rosa{
@@ -81,4 +103,9 @@ h2 {
   width: 140px;
   margin-left: 85vh;
  margin-top: -10%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
