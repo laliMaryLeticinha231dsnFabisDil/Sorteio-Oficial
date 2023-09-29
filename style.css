@@ -1,4 +1,6 @@
 
+
+/* Fontes para o uso do site */
 @font-face {
     font-family: Satisfy;
     src: url(font/Satisfy-Regular.ttf);
@@ -17,6 +19,8 @@ body{
     background: rgb(190,217,212);
     background: radial-gradient(circle, rgba(190,217,212,1) 0%, rgba(170,228,228,1) 31%, rgba(66,213,185,1) 100%);
 }
+/* ....................................................................................................................... */
+
 .titulo{
     font-family: Noto Sans ;
     font-size: 60px;
@@ -26,12 +30,7 @@ body{
     color: #fff;
 }
 
-.container{
-    width: 1400px;
-    height: 400px;
-    background-color: #ffffffa4;
-    border-radius: 10px;
-}
+/* editação das caixas de inserir número  */
 #max, #min{
     width:220px;
     height:50px;
@@ -52,12 +51,28 @@ label{
     margin-bottom: 20px;
     font-family: Catamaran;
 }
+/* .......................................................................................... */
+
+
+/* Edição da caixa onde fica o min e max */
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
+
+.container{
+    width: 1400px;
+    height: 400px;
+    background-color: #ffffffa4;
+    border-radius: 10px;
+}
+
+/* ............................................................................................ */
+
+
+/* Botão de sortear */
 
 #sortear{
     width:220px;
@@ -90,12 +105,10 @@ label{
 #sortear:hover {
     background-color: rgb(246, 87, 114);
 }
+/* .................................................................................. */
 
 
-
-
-
-
+/* Parte do "pisca pisca" junto com a parte onde fica minimo e maximo */
 
 .container{
     color: #191919;
