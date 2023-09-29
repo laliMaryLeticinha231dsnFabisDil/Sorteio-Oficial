@@ -16,8 +16,8 @@
   }
 
 body{
-    background: rgb(190,217,212);
-    background: radial-gradient(circle, rgba(190,217,212,1) 0%, rgba(170,228,228,1) 31%, rgba(66,213,185,1) 100%);
+    background: rgb(193,246,201);
+background: radial-gradient(circle, rgba(193,246,201,1) 0%, rgba(179,249,197,1) 31%, rgba(133,250,160,1) 100%);
 }
 /* ....................................................................................................................... */
 
@@ -31,42 +31,58 @@ body{
 }
 
 /* editação das caixas de inserir número  */
-#max, #min{
-    width:220px;
-    height:50px;
-    border: 40px;
-    border-radius: 9px;
-    top: 40px;
-   
+
+#max, #min {
+    width: 420px;
+    height: 100px;
+    border-radius: 34px;
+    border: #19191900;
+    margin-right: 40px; /* Adicionei margin-right para espaçamento */
+    margin-left: 10px; /* Adicionei margin-left para espaçamento */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.entradas{
+.entradas {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    justify-content: center; /* Centraliza os campos de entrada horizontalmente */
+    align-items: center; /* Centraliza os campos de entrada verticalmente */
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#max, #min, .entradas{
+    margin-top: 70px;
 }
 
 label{
+    
     display: block;
-    margin-bottom: 20px;
     font-family: Catamaran;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 /* .......................................................................................... */
 
 
 /* Edição da caixa onde fica o min e max */
 .container {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    margin-left: 220px;
     text-align: center;
 }
 
 .container{
-    width: 1400px;
-    height: 400px;
-    background-color: #ffffffa4;
+    height: 500px;
+    background-color: #ffffff97;
     border-radius: 10px;
+    box-shadow: #1919198d 10px 10px 10px 10px;
 }
 
 /* ............................................................................................ */
@@ -79,7 +95,6 @@ label{
     height:50px;
     justify-content: center; 
     margin-bottom: 40px;
-    background-color:rgb(231, 112, 132);
     border: 40px;
     border-radius: 20px;
     margin-top: 70px;
@@ -88,23 +103,10 @@ label{
 }
 
 #resultado{
-   color: red;
   margin-top: -150px;
   font-family: Catamaran;
 }
-#sortear {
-    background-color: rgb(247, 132, 151);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-#sortear:hover {
-    background-color: rgb(246, 87, 114);
-}
 /* .................................................................................. */
 
 
@@ -117,22 +119,22 @@ label{
     justify-content: center;
     width: 100%;
     margin-bottom: 1rem;
-    filter: drop-shadow(0 0 45px #2aa7d1);
-    -webkit-filter: drop-shadow(0 0 15px #3183bd);
-    -moz-filter: drop-shadow(0 0 15px #36a9de);
-    -o-filter: drop-shadow(0 0 15px #1383af);
-    -ms-filter: drop-shadow(0 0 15px #3c8cbe);
+    filter: drop-shadow(0 0 45px #2f8f02ae);
+    -webkit-filter: drop-shadow(0 0 15px #2f8f02a7);
+    -moz-filter: drop-shadow(0 0 15px #2f8f0281);
+    -o-filter: drop-shadow(0 0 15px #2f8f027f);
+    -ms-filter: drop-shadow(0 0 15px #2f8f0271);
 }
 
 
 
 @keyframes piscar {
     0% {
-        filter: drop-shadow(0 0 15px #2aa7d1);
-        -webkit-filter: drop-shadow(0 0 15px #3183bd);
-        -moz-filter: drop-shadow(0 0 15px #36a9de);
-        -o-filter: drop-shadow(0 0 15px #1383af);
-        -ms-filter: drop-shadow(0 0 15px #3c8cbe);
+        filter: drop-shadow(0 0 15px #2e8f02);
+        -webkit-filter: drop-shadow(0 0 15px #2e8f02);
+        -moz-filter: drop-shadow(0 0 15px #2e8f02);
+        -o-filter: drop-shadow(0 0 15px #2e8f02);
+        -ms-filter: drop-shadow(0 0 15px #2e8f02);
     }
     100% {
     }
@@ -155,4 +157,131 @@ label{
         opacity: 0
     }
 }
+
+
+
+
+/* Botão de sortear */
+
+.button {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #50e176;
+    transition: all 0.2s ease;
+  }
+  
+  .button:active {
+    transform: scale(0.96);
+  }
+  
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #3dbf29 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #28a650 20%, transparent 30%),
+      radial-gradient(circle, #2ae860 20%, transparent 20%),
+      radial-gradient(circle, #07992e 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #4b9a4d 15%, transparent 20%),
+      radial-gradient(circle, #3a8977 20%, transparent 20%),
+      radial-gradient(circle, #25944f 20%, transparent 20%),
+      radial-gradient(circle, #189257 20%, transparent 20%),
+      radial-gradient(circle, #1b953b 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #45cf29 20%, transparent 20%),
+      radial-gradient(circle, #66e82a 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #2ae873 15%, transparent 20%),
+      radial-gradient(circle, #2ead54 20%, transparent 20%),
+      radial-gradient(circle, #34bb4f 20%, transparent 20%),
+      radial-gradient(circle, #2ae873 20%, transparent 20%),
+      radial-gradient(circle, rgb(42, 232, 159) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 1.0s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+
+/* imagem trevo-verde */
+
+.trevo-verde{
+    display: flex;
+    width: 60px;
+    height: 70px;
+    margin-top:-87vh;
+    margin-left: 40vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* //resine none para de cooisa coisa de escrever vc sabe*/
