@@ -2,31 +2,133 @@
     font-family: chango;
     src: url(font/Chango-Regular.ttf);
 }
+@font-face {
+    font-family: Noto Sans;
+    src: url(font/NotoSans-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    src: url(font/Roboto-Regular.ttf);
+  }
+
 
 body {
-    background: rgb(255,253,187);
-    background: radial-gradient(circle, rgba(255,253,187,1) 0%, rgb(229, 227, 163) 31%, rgba(236,217,148,0.9501050420168067) 100%);
+    background: rgb(221, 187, 243);
+    background: radial-gradient(circle, rgba(221, 187, 243, 1) 0%, rgba(209, 147, 248, 1) 25%, rgba(207, 139, 249, 1) 55%, rgba(201, 120, 251, 1) 77%, rgba(220, 129, 243, 1) 100%);
 }
 
-.container {
-    .container {
-        width: 900px;
-        height: 200px;
-       background-color: #ffffffc2;
-        border-radius: 19px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-h2 {
-    font-family: chango;
-    font-size: 65px;
-    color: #ffffff;
+/* Titulo */
+h2{
+    font-family: Noto Sans;
+    color: white;
+    font-size: 60px ;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    margin-top: 20px;
 }
 
+
+    
+    /* começo do container */
+    .container{
+        width: 120vh;
+        height: 76vh;
+        margin-left: 200px;
+        margin-top: -30px;
+       background-color: white;
+     border-radius: 24px;
+     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.558) ;
+    }
+
+
+    /* Edição do label e da entrada de nomes */
+   #entradaNomes{
+    resize: none;
+    width: 90vh;
+    height: 40vh;
+    margin-left: 10px;
+    margin-top: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.677);
+    border-radius: 13px;
+  
+
+   }
+   label{
+    font-family: Roboto;
+    font-size: 20px;
+    display: flex;
+     margin-left: 240px;
+   }
+
+   /* fim das edições  */
+
+   /* começo do botão sortear e o "resultado" */
+
+   .resultado{
+    font-family: Roboto;
+    margin-top: -160px; 
+    margin-left: 390px;
+    display: flex;
+   }
+   
+    .sortear {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 190px;
+        margin-top: 100px; 
+        margin-left: 280px;
+        display: flex;
+        color: white;
+    }
+    
+    button {
+        --glow-color: rgba(243, 224, 242, 0);
+        --glow-spread-color: rgb(234, 174, 252);
+        --enhanced-glow-color: rgb(189, 123, 252);
+        --btn-color: rgba(238, 136, 252, 0.997);
+        border: .25em solid var(--glow-color);
+        padding: 1em 3em;
+        color: var(--glow-color);
+        font-size: 15px;
+        font-weight: bold;
+        background-color: var(--btn-color);
+        border-radius: 1em;
+        outline: none;
+        box-shadow: 0 0 1em .25em var(--glow-color),
+               0 0 4em 1em var(--glow-spread-color),
+               inset 0 0 .75em .25em var(--glow-color);
+        text-shadow: 0 0 .5em var(--glow-color);
+        position: relative;
+        transition: all 0.3s;
+       }
+       
+       button::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--glow-spread-color);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+       }
+       
+       button:hover {
+        color: var(--btn-color);
+        background-color: var(--glow-color);
+        box-shadow: 0 0 1em .25em var(--glow-color),
+               0 0 4em 2em var(--glow-spread-color),
+               inset 0 0 .75em .25em var(--glow-color);
+       }
+       
+       button:active {
+        box-shadow: 0 0 0.6em .25em var(--glow-color),
+               0 0 2.5em 2em var(--glow-spread-color),
+               inset 0 0 .5em .25em var(--glow-color);
+       }
+    
+    
